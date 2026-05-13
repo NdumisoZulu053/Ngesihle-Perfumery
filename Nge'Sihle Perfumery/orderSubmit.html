@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Submission</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Order Confirmation</h1>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="clientRegistrationForm.html">Register</a>
+        <a href="products.html">View Products</a>
+        <a href="staff.html">Meet Our Staff</a>
+    </div>
+    
+    <div class="order-section">
+        <h2>Customer Information</h2>
+        <div class="order-details" id="customerInfo">
+            <!-- Customer info will be inserted here by JavaScript -->
+        </div>
+    </div>
+    
+    <div class="order-section">
+        <h2>Payment Information</h2>
+        <div class="order-details" id="paymentInfo">
+            <!-- Payment info will be inserted here by JavaScript -->
+        </div>
+    </div>
+    
+    <div class="order-section">
+        <h2>Order Summary</h2>
+        <div class="order-details">
+            <div id="orderItems">
+                <!-- Order items will be inserted here by JavaScript -->
+            </div>
+            <div id="orderTotals">
+                <!-- Order totals will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            // Display customer information
+            const customerInfo = document.getElementById('customerInfo');
+            customerInfo.innerHTML = `
+                <p><strong>Name:</strong> ${urlParams.get('firstName')} ${urlParams.get('lastName')}</p>
+                <p><strong>Delivery Address:</strong> ${urlParams.get('deliveryAddress')}</p>
+            `;
+            
+            // Display payment information (simulated for this example)
+            const paymentInfo = document.getElementById('paymentInfo');
+            paymentInfo.innerHTML = `
+                <p><strong>Name on Card:</strong> ${urlParams.get('firstName')} ${urlParams.get('lastName')}</p>
+                <p><strong>Card Type:</strong> Visa</p>
+                <p><strong>Card Number:</strong> <span class="credit-card-number">*** *** *** 1234</span></p>
+                <p><strong>Expiration:</strong> 12/2025</p>
+            `;
+            
+            // Process order items
+            const orderItems = document.getElementById('orderItems');
+            let subtotal = 0;
+            let productsOrdered = [];
+            
+            // Check each product checkbox to see if it was selected
+            for (let i = 1; i <= 5; i++) {
+                const productKey = `product${i}`;
+                if (urlParams.get(productKey)) {
+                    const productName = getProductName(i);
+                    const price = parseFloat(urlParams.get(productKey));
+                    const quantity = parseInt(urlParams.get(`quantity${i}`)) || 1;
+                    const total = price * quantity;
+                    
+                    subtotal += total;
+                    productsOrdered.push({ name: productName, price: price, quantity: quantity, total: total });
+                }
+            }
+            
+            // Display order items
+            productsOrdered.forEach(item => {
+                const productDiv = document.createElement('div');
+                productDiv.className = 'product-item';
+                productDiv.innerHTML = `
+                    <span>${item.quantity} x ${item.name}</span>
+                    <span>R${item.total.toFixed(2)}</span>
+                `;
+                orderItems.appendChild(productDiv);
+            });
+            
+            // Calculate VAT and total
+            const vat = subtotal * 0.15;
+            const total = subtotal + vat;
+            
+            // Display order totals
+            const orderTotals = document.getElementById('orderTotals');
+            orderTotals.innerHTML = `
+                <div class="product-item">
+                    <span>Subtotal:</span>
+                    <span>R${subtotal.toFixed(2)}</span>
+                </div>
+                <div class="product-item">
+                    <span>VAT (15%):</span>
+                    <span>R${vat.toFixed(2)}</span>
+                </div>
+                <div class="total-section product-item">
+                    <span>Total:</span>
+                    <span>R${total.toFixed(2)}</span>
+                </div>
+            `;
+            
+            // Helper function to get product name based on index
+            function getProductName(index) {
+                const products = [
+                    "Oud Madness",
+                    "khamrah",
+                    "Proud Of You",
+                    "Identity Unique Potrait",
+                    "Suave"
+                ];
+                return products[index - 1] || `Product ${index}`;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - NGE'SIHLE PERFUMERY</title>
+    <link rel="stylesheet" href="StyleSheet/style.css"> 
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <span class="burger-icon">&#9776;</span>
+        <h1>NGE'SIHLE PERFUMERY</h1>
+        <div class="image">
+            <img src="images/ngesihle1.png" alt="business logo">
+        </div>
+    </header>
+
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contacts.html">Contact Us</a></li>
+            <li><a href="clientRegistrationForm.html">Registration</a></li>
+        </ul>
+    </nav>
+<form id="registrationForm" action="products.html" method="GET">
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="deliveryAddress">Delivery Address:</label>
+            <textarea id="deliveryAddress" name="deliveryAddress" rows="3" required></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <div id="passwordError" class="error"></div>
+        </div>
+        
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <div id="confirmError" class="error"></div>
+        </div>
+        
+        <button type="submit">Register and Continue Shopping</button>
+    </form>
+    <script src="ngesihle.js"></script>
+</body>
+</html>

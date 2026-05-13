@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - NGE'SIHLE PERFUMERY</title>
+    <link rel="stylesheet" href="StyleSheet/style.css"> 
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="regerstration.js"></script>
+</head>
+<body>
+    <header>
+        <span class="burger-icon">&#9776;</span>
+        <h1>NGE'SIHLE PERFUMERY</h1>
+        <div class="image">
+            <img src="images/ngesihle1.png" alt="business logo">
+        </div>
+    </header>
+
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contacts.html">Contact Us</a></li>
+            <li><a href="clientRegistrationForm.html">Registration</a></li>
+        </ul>
+    </nav>
+    </header>
+    <div class="form">
+    <form>
+        <h2>Be part of our ever growing family by registering your details with us.</h2>
+        <div class="body">
+            <div class="container">
+        <h1>Client Registration Form</h1>
+        <form id="registrationForm" novalidate>
+            <!-- Personal Information Section -->
+            <h2>Personal Information</h2>
+            
+            <div class="form-group">
+                <label for="preferredName">Preferred Name*</label>
+                <input type="text" id="preferredName" name="preferredName" required>
+                <div class="error" id="preferredNameError"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="fullName">Full Name as on ID*</label>
+                <input type="text" id="fullName" name="fullName" required>
+                <div class="error" id="fullNameError"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="surname">Surname*</label>
+                <input type="text" id="surname" name="surname" required>
+                <div class="error" id="surnameError"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="birthDate">Birth Date*</label>
+                <div class="birth-date">
+                    <select id="birthDay" name="birthDay" required>
+                        <option value="">Day</option>
+                        <!-- Days 1-31 -->
+                        <script>
+                            for(let i = 1; i <= 31; i++) {
+                                document.write(`<option value="${i}">${i}</option>`);
+                            }
+                        </script>
+                    </select>
+                    
+                    <select id="birthMonth" name="birthMonth" required>
+                        <option value="">Month</option>
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                    
+                    <select id="birthYear" name="birthYear" required>
+                        <option value="">Year</option>
+                        <!-- Years from 1900 to current year - 18 -->
+                        <script>
+                            const currentYear = new Date().getFullYear();
+                            for(let i = currentYear - 18; i >= 1900; i--) {
+                                document.write(`<option value="${i}">${i}</option>`);
+                            }
+                        </script>
+                    </select>
+                </div>
+                <div class="error" id="birthDateError"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="idNumber">ID Number*</label>
+                <input type="text" id="idNumber" name="idNumber" required pattern="[0-9]{13}">
+                <div class="error" id="idNumberError"></div>
+            </div>
+            
+            <!-- Contact Information Section -->
+            <h2>Contact Information</h2>
+            
+            <div class="form-group">
+                <label for="telephoneWork">Telephone (Work)</label>
+                <input type="tel" id="telephoneWork" name="telephoneWork" pattern="[0-9]{10}">
+                <div class="error" id="telephoneWorkError"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="cellphone">Cellphone Number*</label>
+                <input type="tel" id="cellphone" name="cellphone" required pattern="[0-9]{10}">
+                <div class="error" id="cellphoneError"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error" id="emailError"></div>
+            </div>
+            
+            <!-- Address Information Section -->
+            <h2>Address Information</h2>
+            
+            <div class="form-group">
+                <label>Home Address*</label>
+                <div class="address-group">
+                    <div>
+                        <input type="text" id="street" name="street" placeholder="Street Name" required>
+                    </div>
+                    <div>
+                        <input type="text" id="suburb" name="suburb" placeholder="Suburb" required>
+                    </div>
+                    <div>
+                        <input type="text" id="city" name="city" placeholder="City/Town" required>
+                    </div>
+                    <div>
+                        <select id="province" name="province" required>
+                            <option value="">Select Province</option>
+                            <option value="EC">Eastern Cape</option>
+                            <option value="FS">Free State</option>
+                            <option value="GP">Gauteng</option>
+                            <option value="KZN">KwaZulu-Natal</option>
+                            <option value="LP">Limpopo</option>
+                            <option value="MP">Mpumalanga</option>
+                            <option value="NC">Northern Cape</option>
+                            <option value="NW">North West</option>
+                            <option value="WC">Western Cape</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="text" id="postalCode" name="postalCode" placeholder="Postal Code" required pattern="[0-9]{4}">
+                    </div>
+                </div>
+                <div class="error" id="addressError"></div>
+            </div>
+            
+            <div class="form-group">
+                <label>Postal Address</label>
+                <div class="copy-address">
+                    <input type="checkbox" id="sameAsHome" name="sameAsHome">
+                    <label for="sameAsHome">Same as Home Address</label>
+                </div>
+                
+                <div id="postalAddressFields">
+                    <div class="address-group">
+                        <div>
+                            <input type="text" id="postalStreet" name="postalStreet" placeholder="Street Name">
+                        </div>
+                        <div>
+                            <input type="text" id="postalSuburb" name="postalSuburb" placeholder="Suburb">
+                        </div>
+                        <div>
+                            <input type="text" id="postalCity" name="postalCity" placeholder="City/Town">
+                        </div>
+                        <div>
+                            <select id="postalProvince" name="postalProvince">
+                                <option value="">Select Province</option>
+                                <option value="EC">Eastern Cape</option>
+                                <option value="FS">Free State</option>
+                                <option value="GP">Gauteng</option>
+                                <option value="KZN">KwaZulu-Natal</option>
+                                <option value="LP">Limpopo</option>
+                                <option value="MP">Mpumalanga</option>
+                                <option value="NC">Northern Cape</option>
+                                <option value="NW">North West</option>
+                                <option value="WC">Western Cape</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="text" id="postalPostalCode" name="postalPostalCode" placeholder="Postal Code" pattern="[0-9]{4}">
+                        </div>
+                    </div>
+                </div>
+                <div class="error" id="postalAddressError"></div>
+            </div>
+            
+            <!-- Marketing Information Section -->
+            <h2>Marketing Information</h2>
+            
+            <div class="form-group">
+                <label for="hearAbout">How did you hear about us?*</label>
+                <select id="hearAbout" name="hearAbout" required>
+                    <option value="">Select an option</option>
+                    <option value="wordOfMouth">Word of Mouth</option>
+                    <option value="internetSearch">Internet Search</option>
+                    <option value="socialMedia">Social Media</option>
+                    <option value="advertising">Advertising</option>
+                    <option value="other">Other</option>
+                </select>
+                <div class="error" id="hearAboutError"></div>
+            </div>
+            
+            <!-- Payment Information Section -->
+            <div class="credit-card">
+                <h2>Payment Information</h2>
+                
+                <div class="form-group">
+                    <label for="cardName">Name on Credit Card*</label>
+                    <input type="text" id="cardName" name="cardName" required>
+                    <div class="error" id="cardNameError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cardType">Credit Card Type*</label>
+                    <select id="cardType" name="cardType" required>
+                        <option value="">Select Card Type</option>
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">MasterCard</option>
+                        <option value="amex">American Express</option>
+                        <option value="discover">Discover</option>
+                    </select>
+                    <div class="error" id="cardTypeError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cardNumber">Credit Card Number*</label>
+                    <input type="text" id="cardNumber" name="cardNumber" required pattern="[0-9]{13,16}">
+                    <div class="error" id="cardNumberError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Expiration Date*</label>
+                    <select id="expMonth" name="expMonth" required>
+                        <option value="">Month</option>
+                        <option value="1">01 - January</option>
+                        <option value="2">02 - February</option>
+                        <option value="3">03 - March</option>
+                        <option value="4">04 - April</option>
+                        <option value="5">05 - May</option>
+                        <option value="6">06 - June</option>
+                        <option value="7">07 - July</option>
+                        <option value="8">08 - August</option>
+                        <option value="9">09 - September</option>
+                        <option value="10">10 - October</option>
+                        <option value="11">11 - November</option>
+                        <option value="12">12 - December</option>
+                    </select>
+                    
+                    <select id="expYear" name="expYear" required>
+                        <option value="">Year</option>
+                        <script>
+                            for(let i = currentYear; i <= currentYear + 10; i++) {
+                                document.write(`<option value="${i}">${i}</option>`);
+                            }
+                        </script>
+                    </select>
+                    <div class="error" id="expDateError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cvc">CVC Number*</label>
+                    <input type="text" id="cvc" name="cvc" required pattern="[0-9]{3,4}">
+                    <div class="error" id="cvcError"></div>
+                </div>
+            </div>
+            
+
+            <form id="registrationForm">
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required 
+           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+           title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters">
+    <div class="password-requirements">
+      <p>Password must contain:</p>
+      <ul>
+        <li id="length">At least 8 characters</li>
+        <li id="uppercase">One uppercase letter</li>
+        <li id="lowercase">One lowercase letter</li>
+        <li id="number">One number</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required>
+    <span id="passwordMatch"></span>
+  </div>
+  
+  <button type="submit">Register</button>
+            </form>
+        </div>
+        </form>
+    </div>
+
+    </form>
+    </div>
+
+</body>
+<footer></footer>

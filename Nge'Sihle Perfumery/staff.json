@@ -1,0 +1,72 @@
+[ {
+      "staffNumber": 101,
+      "firstName": "Fortunate",
+      "lastName": "Mshiane",
+      "jobDescription": "Manager",
+      "workPhone": "073 140 2524",
+      "workEmail": "Fortunate.Masine@company.com"
+    },
+    {
+      "staffNumber": 102,
+      "firstName": "Sarah",
+      "lastName": "Johnson",
+      "workPhone": "555-0102",
+      "workEmail": "sarah.johnson@company.com"
+    },
+    {
+      "staffNumber": 103,
+      "firstName": "Michael",
+      "lastName": "Ntuli",
+      "workPhone": "063 555-0103",
+      "workEmail": "michael.ntuli@company.com"
+    },
+    {
+      "staffNumber": 104,
+      "firstName": "Emily",
+      "lastName": "Brown",
+      "workPhone": "075 555-0104",
+      "workEmail": "emily.brown@company.com"
+    },
+    {
+      "staffNumber": 105,
+      "firstName": "David",
+      "lastName": "Themba",
+      "workPhone": "062 555-0105",
+      "workEmail": "david.Themba@company.com"
+    },
+    {
+      "staffNumber": 106,
+      "firstName": "Jessica",
+      "lastName": "Mkhize",
+      "workPhone": "087 555-0106",
+      "workEmail": "jessica.mkhize@company.com"
+    },
+    {
+      "staffNumber": 107,
+      "firstName": "Robert",
+      "lastName": "Dladla",
+      "workPhone": "079 555-0107",
+      "workEmail": "robert.dladla@company.com"
+    },
+    {
+      "staffNumber": 108,
+      "firstName": "Amanda",
+      "lastName": "Luvalo",
+      "workPhone": "066 555-0108",
+      "workEmail": "amanda.luvalo@.com"
+    },
+    {
+      "staffNumber": 109,
+      "firstName": "James",
+      "lastName": "Maseko",
+      "workPhone": "089 555-0109",
+      "workEmail": "james.maseko@ngesihleperfumery.com"
+    },
+    {
+      "staffNumber": 110,
+      "firstName": "Jabulani ",
+      "lastName": "Dlomo",
+      "workPhone": "076 555-0110",
+      "workEmail": "Jabulani.Dlomo@ngesihleperfumery.com"
+    }
+]
