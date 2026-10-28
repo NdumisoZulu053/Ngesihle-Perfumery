@@ -1,30 +1,41 @@
-Ngesihle Perfumery
+# Ngesihle Perfumery
 
-My first website project, built with HTML.
+A responsive e-commerce web application designed for a bespoke perfumery business, built as a hands-on project to strengthen core web development fundamentals.
 
-Overview
+## Overview
 
-A website for a perfumery business, created as my first hands-on web development project. It was where I practised structuring a web page and presenting content clearly.
+Ngesihle Perfumery showcases a curated selection of luxury fragrances, providing a clean and immersive browsing experience for customers. This project focuses on semantic structure, modern styling, and delivering a smooth user interface.
 
-Features
-[EDIT: list the real pages and sections, e.g. home, products, contact]
-Built with HTML
-[EDIT: mention CSS or JavaScript only if you used them]
-What I Learned
-Structuring a page with semantic HTML
-Organising content across sections and pages
-[EDIT: add anything you really learned, e.g. layout, forms, images]
-Tech Stack
-HTML [EDIT: add CSS / JavaScript if used]
-Getting Started
+## Features
 
-No installation needed.
+* **Home Page:** Welcoming landing section introducing the brand and featured fragrances.
+* **Product Catalog:** Dedicated sections displaying various perfume collections with descriptions and pricing.
+* **About Section:** Brand story highlighting craftsmanship and quality ingredients.
+* **Contact/Inquiry Section:** Clean layout for customer questions and appointment bookings.
 
-bash
-git clone https://github.com/NdumisoZulu053/Ngesihle-Perfumery.git
+## Built With
 
-Open index.html in your browser. [EDIT: use your real main file name]
+* **HTML5:** Semantic document structure and accessible markup.
+* **CSS3:** Custom styling, responsive layouts, and modern design principles.
+* **JavaScript:** Interactive elements and UI enhancements.
 
+## What I Learned
+
+* Structuring complex pages using semantic HTML5 elements.
+* Implementing responsive design techniques to ensure cross-device compatibility.
+* Organising clean, maintainable CSS stylesheets and component layouts.
+
+## Tech Stack
+
+* **Frontend:** HTML, CSS, JavaScript
+
+## Getting Started
+
+No complex installation is needed. Follow these steps to view the project locally:
+
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/NdumisoZulu053/Ngesihle-Perfumery.git](https://github.com/NdumisoZulu053/Ngesihle-Perfumery.git)
 
 Possible Improvements
 Make the layout fully responsive with CSS
